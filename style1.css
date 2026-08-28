@@ -1,0 +1,443 @@
+*
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    color: #ededed;
+    background-color: #180120;
+    
+}
+.header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: #12083f;
+}
+.logo
+{
+    position:relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+
+}
+.navbar a{
+    display: inline-block;
+    font-style: 25px;
+    color:#fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: sildeTop .5s ease forwards;
+   
+}
+.navbar a:hover {
+    color: rgb(241, 10, 222);
+
+}
+.home1{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   align-items: center;
+   padding: 70px 10% 0;
+  
+}
+.home2{
+    max-width: 600px;
+
+}
+.home2 h3{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+.home2 h3 span {
+    color: #0ef;
+}
+.home2 h3:nth-of-type(2){
+    margin-bottom: 30px;
+}
+.home2 h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-deplay: .1s;
+}
+.home2 p{
+    font-size: 20px;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: 1s;
+}
+.avatar {
+  width: 400px;          /* Largeur de l'image */
+  height: 400px;         /* Hauteur identique pour un carré parfait */
+  border-radius: 50%;    /* Transforme le carré en cercle parfait */
+  object-fit: cover;     /* Empêche l'image de se déformer si elle n'est pas carrée à la base */
+}
+.home4 {
+ display: inline-block;
+  padding: 12px 28px;
+  background: #0ef;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #081b29;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.home4:hover{
+  box-shadow: 0 0 5px cyan,
+  0 0 25px cyan, 0 0 50px cyan,
+  0 0 100px cyan, 0 0 20px cyan;
+
+}
+
+.home3 a:hover{
+  background: #0ef;
+  color: #081b29;
+  box-shadow:0 0 20px #0ef;
+}
+.home3 a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    color: #0ef;
+    margin: 30px 15px 30px 0;
+    
+    
+}
+
+@keyframes slideRight {
+    0% { 
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% { 
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes sildeTop {
+    0% { 
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% { 
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom {
+    0% { 
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% { 
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideleft {
+    0% { 
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% { 
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+.about{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   align-items: center;
+   gap: 1.5rem;
+  background-color:  #180120;
+
+}
+.st{
+   text-align: center;
+   font-size: 60px;
+   padding-bottom: 70px;
+}
+.st span{
+    color: aqua;
+}
+.sa span{
+   color: aqua;
+}
+.sa{
+    padding-bottom: 60px;
+    font-size: 50px;
+    text-decoration: underline;
+}
+.sd{
+    font-size: 15px;
+    padding-bottom: 15px;
+}
+.cont{
+    padding: 90px;
+    background-color: #180120;
+
+}
+.serlist{
+    color: aliceblue;
+    font-size: 20px;
+    margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
+    grid-gap: 40px;
+    margin-top: 30px;
+}
+.serlist div{
+    background-color: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #0627ae,
+               1px 1px 40px #0627ae;
+}
+.serlist div i{
+   font-size: 50px;
+   margin-bottom: 30px;
+}
+.serlist div h2{
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.serlist div:hover{
+    transform: translateY(-10px);
+}
+.section{
+    display:flex;
+    flex-wrap:wrap;
+    background-color: #180120;
+}
+.cont1{
+    width: 90%;
+    height: 90%;
+    padding: 75px 90px;
+    margin-left: 120px;
+    
+}
+.head{
+    text-align: center;
+    margin-bottom: 50px;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    font-size: 50px;
+}
+.head span{
+    color: rgb(31, 204, 204);
+}
+.ba{
+    font-size: 23px;
+}
+.tech1 .ba{
+    margin-top: 40px 0;
+}
+.tech1 .ba:first-child{
+    margin-top: 0;
+
+}
+.tech1 .ba:last-child{
+    margin-bottom: 0;
+}
+.tech1 .ba .info{
+    margin-top: 5px;
+
+
+}
+.tech1 .ba .info span{
+    font-size: 17px;
+    font-weight: 500;
+    animation: showtext 0.1s 1s linear forwards;
+    opacity: 0;
+}
+.tech1 .ba .line{
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color:#070707;
+    animation:animate  1s cubic-bezier(1, 0, 0, 5) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+.tech1 .ba .line span{
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0, 5) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.line.html span::after{
+    width: "70%";
+}
+.line.css span:after{
+    width: "50%";
+}
+.line.js span:after{
+    width: "40%";
+}
+.line.laravel span:after{
+    width: "30%";
+}
+.line.node span:after{
+    width: "30%";
+}
+.line.sql span:after{
+    width: "90%";
+}
+.line.aws span:after{
+    width: "60%";
+}
+.cont1 .navb{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    
+}
+.cont1 .navb .nav{
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.cont1 .navb .nav svg{
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    transform: translate(-50%);
+    width: 120px;
+    height: 160px;
+    
+}
+.cont1 .navb .nav .ca{
+    stroke-width: 10;
+    stop-color: black;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-linecap: round;
+    stroke-dashoffset: 502;
+    animation: animate-bar 1s linear forwards;
+}
+@keyframes animate-bar{
+    100%{
+        stroke-dashoffset: -1s;
+    }
+}
+.cb{
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+.cb1 {animation: animate-cb1 1s 1s linear forwards}
+.cb2 {animation: animate-cb2 1s 1s linear forwards}
+.cb3 {animation: animate-cb3 1s 1s linear forwards}
+.cb4 {animation: animate-cb4 1s 1s linear forwards}
+
+@keyframes animate-cb1{
+    100%{
+        stroke-dashoffset: 50;;
+    }
+}
+@keyframes animate-cb2{
+    100%{
+        stroke-dashoffset: 150;;
+    }
+}
+@keyframes animate-cb3{
+    100%{
+        stroke-dashoffset: 125;;
+    }
+}
+@keyframes animate-cb4{
+    100%{
+        stroke-dashoffset: 175;;
+    }
+}
+.navb .pourcentage{
+    position: absolute;
+    top: 65%;
+    left:40%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    
+}
+
+.navb .te{
+    width: 50%;
+    position: absolute;
+    text-align: center;
+    left: 40%;
+    bottom: -5px;
+    transform: translateX(-50%, -50% );
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: ;
+    
+}
+
+p{
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+ul li{
+    font-size: 20px;
+}
+
