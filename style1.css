@@ -441,3 +441,23 @@ ul li{
     font-size: 20px;
 }
 
+/* Code par défaut : s'applique aux MOBILES */
+.carte {
+    width: 100%; 
+}
+
+/* À partir des TABLETTES (768px et plus) */
+@media (min-width: 768px) {
+    .carte {
+        width: 50%; 
+    }
+}
+
+/* À partir des ORDINATEURS (1024px et plus) */
+@media (min-width: 1024px) {
+    .carte {
+        width: 33.33%; 
+    }
+}
+
+
